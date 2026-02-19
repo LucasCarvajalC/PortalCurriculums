@@ -1,0 +1,131 @@
+/* GENERALIDADES */
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    
+}
+header{
+    font-family: 'DM Serif Display';
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+main{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Host Grotesk';
+
+}
+
+
+/* CONTENEDORES */
+.contenedor-main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+.titulos{
+    background-color: #292929;
+    color: white;
+    border-radius: 30px; 
+    
+    display: inline-flex;   
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5px 20px;
+    margin-bottom: 10px;       
+    min-width: 120px;        
+    width: fit-content;        
+    max-width: 100%;
+
+}
+#contenedor-titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex: 1;
+}
+#contacto, #contacto a{
+    color: black;
+}
+.Contenedor-formacion{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 15px;
+
+    grid-template-areas: 
+    'anio info1'
+    'anio info2';
+}
+.anio{
+    grid-area: anio;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info1{
+    grid-area: info1;
+}
+.info2{
+    grid-area: info2;
+}
+.contenedor-linea-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    height: auto;
+}
+@media screen and (min-width:768px) {
+    main{
+        display: grid;
+        grid-template-columns: clamp(150px, 35vw, 450px) 1fr;    
+    }
+    #contenedor-main-1{
+        background-color:#ededed;
+    }
+}
+
+
+
+/* DETALLES MENORES */
+#foto-persona{
+    width: clamp(150px, 35vw, 450px);
+    height: auto;
+}
+h1{
+    font-size: clamp(2rem, 4vw + 1rem, 3.75rem);;
+}
+ul li, h2, a{
+    font-size: clamp(1rem, 0.3vw + 1rem, 1.25rem);;
+}
+.icono{
+    height: 20px;
+    width: 20px;
+}
+a:hover{
+    cursor: pointer;
+}
+ul ul{
+    margin-left: 30px;
+    list-style-type: disc;
+}
+ul{
+    margin-left: 30px;
+}
+li{
+    margin-bottom: 10px;
+}
+p, h2, li{
+    text-align: justify;
+}
+
